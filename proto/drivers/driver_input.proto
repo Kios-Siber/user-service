@@ -1,0 +1,15 @@
+syntax = "proto3";
+package skeleton;
+
+option go_package = "skeleton/pb/drivers;drivers";
+
+import "generic/generic_message.proto";
+
+message DriverListInput {
+  repeated string ids = 1;
+  repeated string names = 2;
+  repeated string phones = 3;
+  repeated string licence_numbers = 4;
+  repeated string company_ids = 5;
+  Pagination pagination = 6;
+}
