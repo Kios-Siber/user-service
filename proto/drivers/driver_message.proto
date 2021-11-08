@@ -1,0 +1,22 @@
+syntax = "proto3";
+package skeleton;
+
+option go_package = "skeleton/pb/drivers;drivers";
+
+message Driver {
+  string id = 1;
+  string name = 2;
+  string phone = 3;
+  string licence_number = 4;
+  string company_id = 5;
+  string company_name = 6;
+  bool is_delete = 7;
+  string created = 8;
+  string created_by = 9;
+  string updated = 10;
+  string updated_by = 11;
+}
+
+message Drivers {
+  repeated Driver driver = 1;
+}
