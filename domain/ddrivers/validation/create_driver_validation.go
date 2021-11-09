@@ -2,8 +2,8 @@ package validation
 
 import (
 	"context"
-	"skeleton/lib/helper"
-	"skeleton/pb/drivers"
+	"ksuser/lib/helper"
+	"ksuser/pb/drivers"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

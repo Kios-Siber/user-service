@@ -2,8 +2,8 @@ package ddrivers
 
 import (
 	"context"
-	"skeleton/pb/drivers"
-	"skeleton/pb/generic"
+	"ksuser/pb/drivers"
+	"ksuser/pb/generic"
 )
 
 type DriverRepoInterface interface {

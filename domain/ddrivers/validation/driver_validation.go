@@ -1,8 +1,8 @@
 package validation
 
 import (
+	"ksuser/domain/ddrivers"
 	"log"
-	"skeleton/domain/ddrivers"
 )
 
 type driverValidation struct {

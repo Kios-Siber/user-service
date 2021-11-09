@@ -2,7 +2,7 @@ package ddrivers
 
 import (
 	"context"
-	"skeleton/pb/drivers"
+	"ksuser/pb/drivers"
 )
 
 type DriverValidationInterface interface {

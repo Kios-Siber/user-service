@@ -2,8 +2,8 @@ package repositories
 
 import (
 	"context"
-	"skeleton/lib/helper"
-	"skeleton/pb/generic"
+	"ksuser/lib/helper"
+	"ksuser/pb/generic"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

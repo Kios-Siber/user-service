@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"skeleton/lib/helper"
+	"ksuser/lib/helper"
 
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

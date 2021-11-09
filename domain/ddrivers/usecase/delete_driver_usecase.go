@@ -2,9 +2,9 @@ package usecase
 
 import (
 	"context"
-	"skeleton/domain/ddrivers/validation"
-	"skeleton/lib/helper"
-	"skeleton/pb/generic"
+	"ksuser/domain/ddrivers/validation"
+	"ksuser/lib/helper"
+	"ksuser/pb/generic"
 )
 
 func (u *service) Delete(ctx context.Context, in *generic.Id) (*generic.BoolMessage, error) {

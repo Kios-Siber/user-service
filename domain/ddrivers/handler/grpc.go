@@ -2,9 +2,9 @@ package handler
 
 import (
 	"context"
-	"skeleton/domain/ddrivers"
-	"skeleton/pb/drivers"
-	"skeleton/pb/generic"
+	"ksuser/domain/ddrivers"
+	"ksuser/pb/drivers"
+	"ksuser/pb/generic"
 )
 
 type DriverHandler struct {

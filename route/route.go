@@ -2,11 +2,11 @@ package route
 
 import (
 	"database/sql"
+	driverHandler "ksuser/domain/ddrivers/handler"
+	driverRepo "ksuser/domain/ddrivers/repositories"
+	driverUsecase "ksuser/domain/ddrivers/usecase"
+	"ksuser/pb/drivers"
 	"log"
-	driverHandler "skeleton/domain/ddrivers/handler"
-	driverRepo "skeleton/domain/ddrivers/repositories"
-	driverUsecase "skeleton/domain/ddrivers/usecase"
-	"skeleton/pb/drivers"
 
 	"google.golang.org/grpc"
 )

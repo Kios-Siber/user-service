@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"skeleton/config"
-	"skeleton/lib/database/postgres"
-	"skeleton/schema"
+	"ksuser/config"
+	"ksuser/lib/database/postgres"
+	"ksuser/schema"
 
 	_ "github.com/lib/pq"
 )
@@ -16,7 +16,7 @@ import (
 func main() {
 	config.Setup(".env")
 
-	log := log.New(os.Stdout, "Skeleton : ", log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
+	log := log.New(os.Stdout, "ksuser : ", log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
 	if err := run(log); err != nil {
 		log.Printf("error: shutting down: %s", err)
 		os.Exit(1)
