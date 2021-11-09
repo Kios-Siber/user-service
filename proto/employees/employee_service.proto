@@ -1,0 +1,10 @@
+syntax = "proto3";
+package ksuser;
+
+option go_package = "ksuser/pb/employees;employees";
+
+import "employees/employee_message.proto";
+
+service EmployeesService {
+  rpc Create(Employee) returns (Employee) {}
+}
