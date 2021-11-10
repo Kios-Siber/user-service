@@ -5,6 +5,13 @@ import (
 	"fmt"
 )
 
+func GetSeed() []string {
+	return []string{
+		"insert into package_features (id, name) values ('39330b9b-9ad6-4900-a19d-dbb94f1b56e5', 'Custome')",
+		"insert into companies (name, code, address, city_id, city, province_id, province, phone, pic, pic_phone, package_feature_id, updated_by) values ('gajahmada', 'GMD', 'jakarta', uuid_generate_v4(), 'Jakarta Timur', uuid_generate_v4(), 'Jakarta', '08174815221', 'Jacky', '08174815221', '39330b9b-9ad6-4900-a19d-dbb94f1b56e5', uuid_generate_v4())",
+	}
+}
+
 // seeds is a string constant containing all of the queries needed to get the
 // db seeded to a useful state for development.
 //

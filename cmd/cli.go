@@ -52,7 +52,7 @@ func run(log *log.Logger) error {
 		return nil
 
 	case "seed":
-		if err := schema.Seed(db); err != nil {
+		if err := schema.Seed(db, schema.GetSeed()...); err != nil {
 			return fmt.Errorf("seeding database: %v", err)
 		}
 		log.Println("Seed data complete")
