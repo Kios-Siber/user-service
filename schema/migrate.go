@@ -116,20 +116,18 @@ var migrations = []darwin.Migration{
                 updated_by uuid NOT NULL,
 				CONSTRAINT fk_users_to_companies FOREIGN KEY(company_id) REFERENCES companies(id),
 				CONSTRAINT fk_users_to_regions FOREIGN KEY(region_id) REFERENCES regions(id),
-				CONSTRAINT fk_users_to_branches FOREIGN KEY(branch_id) REFERENCES branches(id),
-                CONSTRAINT fk_created_by_users FOREIGN KEY(created_by) REFERENCES users(id),
-                CONSTRAINT fk_updated_by_users FOREIGN KEY(updated_by) REFERENCES users(id)
+				CONSTRAINT fk_users_to_branches FOREIGN KEY(branch_id) REFERENCES branches(id)
 			);
 		`,
 	},
-	{
-		Version:     7,
-		Description: "Alter companies Table on updated_by",
-		Script: `
-			ALTER TABLE companies 
-            ADD CONSTRAINT fk_updated_by_companies_to_users FOREIGN KEY(updated_by) REFERENCES users(id);
-		`,
-	},
+	/*{
+			Version:     7,
+			Description: "Alter companies Table on updated_by",
+			Script: `
+				ALTER TABLE companies
+	            ADD CONSTRAINT fk_updated_by_companies_to_users FOREIGN KEY(updated_by) REFERENCES users(id);
+			`,
+		},*/
 	{
 		Version:     8,
 		Description: "Alter regions Table",
@@ -239,31 +237,31 @@ var migrations = []darwin.Migration{
 			);
 		`,
 	},
-	{
-		Version:     16,
-		Description: "Create employees Table",
-		Script: `
-			CREATE TABLE employees (
-				id uuid NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
-				user_id uuid NOT NULL UNIQUE,
-				name varchar(45) NOT NULL,
-				code char(20) NOT NULL UNIQUE,
-				address varchar NOT NULL,
-                city_id uuid NOT NULL,
-				city varchar(45) NOT NULL,
-                province_id uuid NOT NULL,
-				province varchar(45) NOT NULL,
-				jabatan varchar(45) NOT NULL,
-				created_at timestamp NOT NULL DEFAULT NOW(),
-				created_by uuid NOT NULL,
-				updated_at timestamp NOT NULL DEFAULT NOW(),
-				updated_by uuid NOT NULL,
-				CONSTRAINT fk_employees_to_users FOREIGN KEY(user_id) REFERENCES users(id),
-                CONSTRAINT fk_created_by_employees_to_users FOREIGN KEY(created_by) REFERENCES users(id),
-                CONSTRAINT fk_updated_by_employees_to_users FOREIGN KEY(updated_by) REFERENCES users(id)
-			);
-		`,
-	},
+	/*{
+			Version:     16,
+			Description: "Create employees Table",
+			Script: `
+				CREATE TABLE employees (
+					id uuid NOT NULL PRIMARY KEY DEFAULT uuid_generate_v4(),
+					user_id uuid NOT NULL UNIQUE,
+					name varchar(45) NOT NULL,
+					code char(20) NOT NULL UNIQUE,
+					address varchar NOT NULL,
+	                city_id uuid NOT NULL,
+					city varchar(45) NOT NULL,
+	                province_id uuid NOT NULL,
+					province varchar(45) NOT NULL,
+					jabatan varchar(45) NOT NULL,
+					created_at timestamp NOT NULL DEFAULT NOW(),
+					created_by uuid NOT NULL,
+					updated_at timestamp NOT NULL DEFAULT NOW(),
+					updated_by uuid NOT NULL,
+					CONSTRAINT fk_employees_to_users FOREIGN KEY(user_id) REFERENCES users(id),
+	                CONSTRAINT fk_created_by_employees_to_users FOREIGN KEY(created_by) REFERENCES users(id),
+	                CONSTRAINT fk_updated_by_employees_to_users FOREIGN KEY(updated_by) REFERENCES users(id)
+				);
+			`,
+		},*/
 	{
 		Version:     17,
 		Description: "Create features Table",

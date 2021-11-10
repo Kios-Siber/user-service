@@ -3,11 +3,14 @@ package ksuser;
 
 option go_package = "ksuser/pb/users;users";
 
+import "regions/region_message.proto";
+import "branches/branch_message.proto";
+
 message User {
   string id = 1;
   string company_id = 2;
-  string region_id = 3;
-  string branch_id = 4;
+  Region region = 3;
+  Branch branch = 4;
   string username = 5;
   string name = 6;
   string email = 7;
