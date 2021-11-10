@@ -110,6 +110,7 @@ var migrations = []darwin.Migration{
 				password varchar NOT NULL,
 				name varchar(45) NOT NULL,
 				email varchar(100) NOT NULL UNIQUE,
+                is_actived boolean NOT NULL DEFAULT false,
 				created_at timestamp NOT NULL DEFAULT NOW(),
 				updated_at timestamp NOT NULL DEFAULT NOW(),
 				created_by uuid NOT NULL,
