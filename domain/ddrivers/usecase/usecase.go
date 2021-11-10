@@ -1,8 +1,8 @@
 package usecase
 
 import (
+	"ksuser/domain/ddrivers"
 	"log"
-	"skeleton/domain/ddrivers"
 )
 
 type service struct {

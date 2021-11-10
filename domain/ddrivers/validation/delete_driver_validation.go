@@ -2,7 +2,7 @@ package validation
 
 import (
 	"context"
-	"skeleton/lib/helper"
+	"ksuser/lib/helper"
 )
 
 func (u *driverValidation) Delete(ctx context.Context, id string) error {

@@ -1,12 +1,12 @@
 package main
 
 import (
+	"ksuser/config"
+	"ksuser/lib/database/postgres"
+	"ksuser/route"
 	"log"
 	"net"
 	"os"
-	"skeleton/config"
-	"skeleton/lib/database/postgres"
-	"skeleton/route"
 
 	_ "github.com/lib/pq"
 	"google.golang.org/grpc"
@@ -15,7 +15,7 @@ import (
 func main() {
 	config.Setup(".env")
 
-	log := log.New(os.Stdout, "grpc skeleton : ", log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
+	log := log.New(os.Stdout, "grpc ksuser : ", log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
 
 	db, err := postgres.Open()
 	if err != nil {

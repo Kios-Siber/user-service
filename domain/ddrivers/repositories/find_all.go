@@ -3,9 +3,9 @@ package repositories
 import (
 	"context"
 	"fmt"
-	"skeleton/lib/helper"
-	"skeleton/pb/drivers"
-	"skeleton/pb/generic"
+	"ksuser/lib/helper"
+	"ksuser/pb/drivers"
+	"ksuser/pb/generic"
 	"strconv"
 	"strings"
 

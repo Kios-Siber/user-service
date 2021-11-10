@@ -2,9 +2,9 @@ package usecase
 
 import (
 	"context"
-	"skeleton/domain/ddrivers/validation"
-	"skeleton/lib/helper"
-	"skeleton/pb/drivers"
+	"ksuser/domain/ddrivers/validation"
+	"ksuser/lib/helper"
+	"ksuser/pb/drivers"
 )
 
 func (u *service) Create(ctx context.Context, in *drivers.Driver) (*drivers.Driver, error) {

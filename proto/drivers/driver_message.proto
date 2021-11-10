@@ -1,7 +1,7 @@
 syntax = "proto3";
-package skeleton;
+package ksuser;
 
-option go_package = "skeleton/pb/drivers;drivers";
+option go_package = "ksuser/pb/drivers;drivers";
 
 message Driver {
   string id = 1;

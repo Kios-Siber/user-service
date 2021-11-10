@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"skeleton/lib/helper"
+	"ksuser/lib/helper"
 	"time"
 
 	"github.com/google/uuid"

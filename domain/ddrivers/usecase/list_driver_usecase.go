@@ -2,8 +2,8 @@ package usecase
 
 import (
 	"context"
-	"skeleton/lib/helper"
-	"skeleton/pb/drivers"
+	"ksuser/lib/helper"
+	"ksuser/pb/drivers"
 )
 
 func (u *service) List(ctx context.Context, in *drivers.DriverListInput) (*drivers.Drivers, error) {

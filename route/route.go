@@ -2,19 +2,20 @@ package route
 
 import (
 	"database/sql"
+	"ksuser/pb/users"
 	"log"
-	driverHandler "skeleton/domain/ddrivers/handler"
-	driverRepo "skeleton/domain/ddrivers/repositories"
-	driverUsecase "skeleton/domain/ddrivers/usecase"
-	"skeleton/pb/drivers"
+
+	userHandler "ksuser/domain/dusers/handler"
+	userRepo "ksuser/domain/dusers/repositories"
+	userUsecase "ksuser/domain/dusers/usecase"
 
 	"google.golang.org/grpc"
 )
 
 func GrpcRoute(grpcServer *grpc.Server, log *log.Logger, db *sql.DB) {
-	driverServer := driverHandler.NewDriverHandler(
-		driverUsecase.NewService(log, driverRepo.NewDriverRepo(db, log)),
+	userServer := userHandler.NewUserHandler(
+		userUsecase.NewUserService(log, userRepo.NewUserRepo(db, log)),
 	)
 
-	drivers.RegisterDriversServiceServer(grpcServer, driverServer)
+	users.RegisterUsersServiceServer(grpcServer, userServer)
 }

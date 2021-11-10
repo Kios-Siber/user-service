@@ -2,9 +2,9 @@ package repositories
 
 import (
 	"database/sql"
+	"ksuser/domain/ddrivers"
+	"ksuser/pb/drivers"
 	"log"
-	"skeleton/domain/ddrivers"
-	"skeleton/pb/drivers"
 )
 
 type repo struct {

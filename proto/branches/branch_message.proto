@@ -1,0 +1,25 @@
+syntax = "proto3";
+package ksuser;
+
+option go_package = "ksuser/pb/branches;branches";
+
+message Branch {
+  string id = 1;
+  string company_id = 2;
+  string region_id = 3;
+  string name = 4;
+  string code = 5;
+  string address = 6;
+  string city_id = 7;
+  string city = 8;
+  string province_id = 9;
+  string province = 10;
+  string npwp = 11;
+  string phone = 12;
+  string pic = 13;
+  string pic_phone = 14;
+  string created_at =  15;
+  string created_by = 16;
+  string updated_at = 17;
+  string updated_by = 18;
+}
